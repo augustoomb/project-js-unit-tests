@@ -42,7 +42,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     expect(JSON.stringify(productDetails('alcool', 'mascara')[0]) !== JSON.stringify(productDetails('alcool', 'mascara')[1])).toBeTruthy();
     // Teste se os dois productIds terminam com 123.
-    expect( (productDetails('alcool', 'mascara')[0].details.productId).slice(-3) && (productDetails('alcool', 'mascara')[1].details.productId).slice(-3) ).toBeTruthy();
+    expect( (productDetails('alcool', 'mascara')[0].details.productId).slice(-3) === '123' && (productDetails('alcool', 'mascara')[1].details.productId).slice(-3) === '123' ).toBeTruthy();
   });
 });
 
